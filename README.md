@@ -61,6 +61,7 @@ If you want to observe any changes you should to add callbacks like:
 - ```onPinPositionChanged```
 - ```onSelectedEntriesSizeChanged```
 - ```onSelectedItemsSizeChanged```
+
 Let's take look a small sample:
 ```
 seekBar.onPinPositionChanged = { index, pinValue ->
@@ -73,6 +74,7 @@ seekBar.onSelectedItemsSizeChanged = { selectedItemsSize ->
     println("$selectedEntriesSize elements was selected")
 }
 ```
+
 ## License
 ```
 Copyright 2018 stfalcon.com
