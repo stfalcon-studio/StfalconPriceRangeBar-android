@@ -56,4 +56,4 @@ For example:
     app:seekChartUnSelectedLineColor="@android:color/holo_green_light"
     app:seekChartUnselectedBackgroundColor="@android:color/holo_red_light"
     app:seekLineColor="@android:color/holo_blue_light"/>
-    ```
+```
