@@ -1,0 +1,67 @@
+<resources>
+
+    <declare-styleable name="SimpleRangeView">
+        <attr name="lineColor" format="color" />
+        <attr name="activeLineColor" format="color" />
+        <attr name="fixedLineColor" format="color" />
+        <attr name="tickColor" format="color" />
+        <attr name="activeTickColor" format="color" />
+        <attr name="fixedTickColor" format="color" />
+        <attr name="activeThumbColor" format="color" />
+        <attr name="activeFocusThumbColor" format="color" />
+        <attr name="fixedThumbColor" format="color" />
+
+        <attr name="labelColor" format="color" />
+        <attr name="activeLabelColor" format="color" />
+        <attr name="activeThumbLabelColor" format="color" />
+        <attr name="fixedLabelColor" format="color" />
+        <attr name="fixedThumbLabelColor" format="color" />
+
+        <attr name="activeFocusThumbAlpha" format="float" />
+
+        <attr name="lineThickness" format="dimension" />
+        <attr name="activeLineThickness" format="dimension" />
+        <attr name="fixedLineThickness" format="dimension" />
+
+        <attr name="activeThumbRadius" format="dimension" />
+        <attr name="activeThumbFocusRadius" format="dimension" />
+        <attr name="fixedThumbRadius" format="dimension" />
+        <attr name="tickRadius" format="dimension" />
+        <attr name="activeTickRadius" format="dimension" />
+        <attr name="fixedTickRadius" format="dimension" />
+        <attr name="labelMarginBottom" format="dimension" />
+        <attr name="labelFontSize" format="dimension" />
+        <attr name="minDistanceBetweenLabels" format="dimension" />
+        <attr name="innerRangePadding" format="dimension" />
+        <attr name="innerRangePaddingLeft" format="dimension" />
+        <attr name="innerRangePaddingRight" format="dimension" />
+
+        <attr name="start" format="integer" />
+        <attr name="end" format="integer" />
+        <attr name="startFixed" format="integer" />
+        <attr name="endFixed" format="integer" />
+        <attr name="count" format="integer" />
+        <attr name="minDistance" format="integer" />
+        <attr name="maxDistance" format="integer" />
+
+        <attr name="movable" format="boolean" />
+        <attr name="showFixedLine" format="boolean" />
+        <attr name="showTicks" format="boolean" />
+        <attr name="showActiveTicks" format="boolean" />
+        <attr name="showFixedTicks" format="boolean" />
+        <attr name="showLabels" format="boolean" />
+        <attr name="isRange" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="StfalconRangeBarWithChart">
+        <attr name="seekChartSelectedBackgroundColor" format="color" />
+        <attr name="seekChartUnselectedBackgroundColor" format="color" />
+        <attr name="seekChartSelectedLineColor" format="color" />
+        <attr name="seekChartUnSelectedLineColor" format="color" />
+        <attr name="seekActiveLineColor" format="color" />
+        <attr name="seekLineColor" format="color" />
+        <attr name="seekActiveThumbColor" format="color" />
+        <attr name="seekActiveTickRadius" format="dimension" />
+    </declare-styleable>
+
+</resources>

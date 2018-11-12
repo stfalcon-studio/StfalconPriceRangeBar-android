@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/seekbarAreaTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="21dp"
+            android:text="Area"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/seekbarAreaValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="21dp"
+            tools:text="50 m"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/seekbarAreaTitle" />
+
+        <TextView
+            android:id="@+id/seekbarAreaInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="21dp"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/seekbarAreaValue"
+            tools:text="18 elements was selected" />
+
+        <com.stfalcon.pricerangebar.SeekBarWithChart
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="21dp"
+            app:layout_constraintTop_toBottomOf="@+id/seekbarAreaInfo"
+            app:seekActiveLineColor="@android:color/holo_orange_dark"
+            app:seekActiveThumbColor="@android:color/holo_blue_light"
+            app:seekActiveTickRadius="@dimen/custom_active_tick_radius"
+            app:seekChartSelectedBackgroundColor="@android:color/holo_red_dark"
+            app:seekChartSelectedLineColor="@android:color/holo_green_dark"
+            app:seekChartUnSelectedLineColor="@android:color/holo_green_light"
+            app:seekChartUnselectedBackgroundColor="@android:color/holo_red_light"
+            app:seekLineColor="@android:color/holo_blue_light"/>
+
+        <TextView
+            android:id="@+id/rangeBarTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="21dp"
+            android:text="Price"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+        <TextView
+            android:id="@+id/rangeBarValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="21dp"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rangeBarTitle"
+            tools:text="50K€ - 340K€" />
+
+        <TextView
+            android:id="@+id/rangeBarInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginEnd="21dp"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rangeBarValue"
+            tools:text="18 biens vendus dans ce périmètre" />
+
+        <com.stfalcon.pricerangebar.RangeBarWithChart
+            android:id="@+id/rangeBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="21dp"
+            app:layout_constraintTop_toBottomOf="@+id/rangeBarInfo"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
