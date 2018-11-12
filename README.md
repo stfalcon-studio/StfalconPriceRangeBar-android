@@ -18,3 +18,14 @@ Or you can use default rangebar with chart just put this code into your layout:
    android:layout_width="match_parent"
    android:layout_height="wrap_content"/>
 ```
+After that you should to add list entries with data to displaying
+
+```val seekBarEntries = ArrayList<SeekBarEntry>()
+seekBarEntries.add(SeekBarEntry(30.0f, 5.0f))
+seekBarEntries.add(SeekBarEntry(32.0f, 7.0f))
+seekBarEntries.add(SeekBarEntry(34.0f, 10.0f))
+seekBarEntries.add(SeekBarEntry(36.0f, 11.0f))
+seekBarEntries.add(SeekBarEntry(38.0f, 14.0f))
+seekBarEntries.add(SeekBarEntry(40.0f, 15.0f))
+
+seekBar.setEntries(seekBarEntries)```
