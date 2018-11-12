@@ -12,7 +12,7 @@ For adding default seekbar with chart just put this code into your layout:
    android:layout_width="match_parent"
    android:layout_height="wrap_content"/>
 ```
-For adding default rangebar with chart just put this code into your layout:
+Or you can use default rangebar with chart just put this code into your layout:
 ```
 <com.stfalcon.pricerangebar.RangeBarWithChart
    android:layout_width="match_parent"
