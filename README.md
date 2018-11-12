@@ -57,3 +57,7 @@ For example:
     app:seekChartUnselectedBackgroundColor="@android:color/holo_red_light"
     app:seekLineColor="@android:color/holo_blue_light"/>
 ```
+If you want to observe any changes you should to add callbacks like:
+- ```onPinPositionChanged```
+- ```onSelectedEntriesSizeChanged```
+- ```onSelectedItemsSizeChanged```
