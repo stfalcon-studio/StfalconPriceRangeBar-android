@@ -32,3 +32,28 @@ seekBarEntries.add(SeekBarEntry(40.0f, 15.0f))
 
 seekBar.setEntries(seekBarEntries)
 ```
+You can use many attributes for more flexibility and convenience of use. Here's the full list:
+- seekActiveLineColor 
+- seekActiveThumbColor
+- seekActiveTickRadius
+- seekChartSelectedBackgroundColor
+- seekChartSelectedLineColor
+- seekChartUnSelectedLineColor
+- seekChartUnselectedBackgroundColor
+- seekLineColor
+
+For example:
+```
+<com.stfalcon.pricerangebar.SeekBarWithChart
+    android:id="@+id/seekBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:seekActiveLineColor="@android:color/holo_orange_dark"
+    app:seekActiveThumbColor="@android:color/holo_blue_light"
+    app:seekActiveTickRadius="@dimen/custom_active_tick_radius"
+    app:seekChartSelectedBackgroundColor="@android:color/holo_red_dark"
+    app:seekChartSelectedLineColor="@android:color/holo_green_dark"
+    app:seekChartUnSelectedLineColor="@android:color/holo_green_light"
+    app:seekChartUnselectedBackgroundColor="@android:color/holo_red_light"
+    app:seekLineColor="@android:color/holo_blue_light"/>
+    ```
