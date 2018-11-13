@@ -63,14 +63,17 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="21dp"
             app:layout_constraintTop_toBottomOf="@+id/seekbarAreaInfo"
-            app:seekActiveLineColor="@android:color/holo_orange_dark"
-            app:seekActiveThumbColor="@android:color/holo_blue_light"
-            app:seekActiveTickRadius="@dimen/custom_active_tick_radius"
-            app:seekChartSelectedBackgroundColor="@android:color/holo_red_dark"
-            app:seekChartSelectedLineColor="@android:color/holo_green_dark"
-            app:seekChartUnSelectedLineColor="@android:color/holo_green_light"
-            app:seekChartUnselectedBackgroundColor="@android:color/holo_red_light"
-            app:seekLineColor="@android:color/holo_blue_light"/>
+            app:barActiveLineColor="@android:color/holo_orange_dark"
+            app:barLineColor="@android:color/holo_blue_light"
+            app:barThumbColor="@android:color/black"
+            app:barActiveThumbColor="@android:color/black"
+            app:barChartSelectedBackgroundColor="@android:color/holo_red_dark"
+            app:barChartSelectedLineColor="@android:color/holo_green_dark"
+            app:barChartUnSelectedLineColor="@android:color/holo_green_light"
+            app:barChartUnselectedBackgroundColor="@android:color/holo_red_light"
+            />
+
+        <!--app:barActiveTickRadius="@dimen/custom_active_tick_radius"-->
 
         <TextView
             android:id="@+id/rangeBarTitle"
@@ -112,7 +115,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/rangeBarValue"
-            tools:text="18 biens vendus dans ce périmètre" />
+            tools:text="18 elements was selected" />
 
         <com.stfalcon.pricerangebar.RangeBarWithChart
             android:id="@+id/rangeBar"

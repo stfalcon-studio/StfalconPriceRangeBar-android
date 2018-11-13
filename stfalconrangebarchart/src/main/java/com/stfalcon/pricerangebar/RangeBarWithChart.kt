@@ -84,6 +84,15 @@ class RangeBarWithChart @JvmOverloads constructor(
         }
 
     /**
+     * Color of active thumb in seekbar
+     * */
+    private var thumbActiveColor: Int = ContextCompat.getColor(context, R.color.colorRangeSelected)
+        set(value) {
+            field = value
+            applyRangeBarStyle()
+        }
+
+    /**
      * Radius of active tick in seekbar
      * */
     private var tickRadius: Float =
@@ -133,6 +142,7 @@ class RangeBarWithChart @JvmOverloads constructor(
             lineColor = unselectedSeekColor
         }
         elementRangeBar.activeThumbColor = thumbColor
+        elementRangeBar.activeFocusThumbColor = thumbActiveColor
         elementRangeBar.activeTickRadius = tickRadius
     }
 
@@ -311,45 +321,50 @@ class RangeBarWithChart @JvmOverloads constructor(
     @SuppressLint("CustomViewStyleable")
     private fun parseAttr(attrs: AttributeSet) {
         val typedArray =
-            context.obtainStyledAttributes(attrs, R.styleable.StfalconRangeBarWithChart)
+            context.obtainStyledAttributes(attrs, R.styleable.PriceRangeBar)
 
         chartSelectedBackgroundColor = typedArray.getColor(
-            R.styleable.StfalconRangeBarWithChart_seekChartSelectedBackgroundColor,
+            R.styleable.PriceRangeBar_barChartSelectedBackgroundColor,
             chartSelectedBackgroundColor
         )
 
         chartUnselectedBackgroundColor = typedArray.getColor(
-            R.styleable.StfalconRangeBarWithChart_seekChartUnselectedBackgroundColor,
+            R.styleable.PriceRangeBar_barChartUnselectedBackgroundColor,
             chartUnselectedBackgroundColor
         )
 
         chartSelectedLineColor = typedArray.getColor(
-            R.styleable.StfalconRangeBarWithChart_seekChartSelectedLineColor,
+            R.styleable.PriceRangeBar_barChartSelectedLineColor,
             chartSelectedLineColor
         )
 
         chartUnSelectedLineColor = typedArray.getColor(
-            R.styleable.StfalconRangeBarWithChart_seekChartUnSelectedLineColor,
+            R.styleable.PriceRangeBar_barChartUnSelectedLineColor,
             chartUnSelectedLineColor
         )
 
         selectedSeekColor = typedArray.getColor(
-            R.styleable.StfalconRangeBarWithChart_seekActiveLineColor,
+            R.styleable.PriceRangeBar_barActiveLineColor,
             selectedSeekColor
         )
 
         unselectedSeekColor = typedArray.getColor(
-            R.styleable.StfalconRangeBarWithChart_seekLineColor,
+            R.styleable.PriceRangeBar_barLineColor,
             unselectedSeekColor
         )
 
         thumbColor = typedArray.getColor(
-            R.styleable.StfalconRangeBarWithChart_seekActiveThumbColor,
+            R.styleable.PriceRangeBar_barThumbColor,
             thumbColor
         )
 
+        thumbActiveColor = typedArray.getColor(
+            R.styleable.PriceRangeBar_barActiveThumbColor,
+            thumbActiveColor
+        )
+
         tickRadius = typedArray.getDimension(
-            R.styleable.StfalconRangeBarWithChart_seekActiveTickRadius,
+            R.styleable.PriceRangeBar_barActiveTickRadius,
             tickRadius
         )
 
