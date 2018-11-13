@@ -57,12 +57,19 @@ For example:
     app:seekChartUnselectedBackgroundColor="@android:color/holo_red_light"
     app:seekLineColor="@android:color/holo_blue_light"/>
 ```
-If you want to observe any changes you should to add callbacks like:
+If you want to observe any changes in seekbar you should to add callbacks like:
 - ```onPinPositionChanged```
 - ```onSelectedEntriesSizeChanged```
 - ```onSelectedItemsSizeChanged```
 
-Let's take look a small sample:
+If you want to observe any changes in rangebar you should to add callbacks like:
+- ```onRangeChanged```
+- ```onLeftPinChanged```
+- ```onRightPinChanged```
+- ```onSelectedEntriesSizeChanged```
+- ```onSelectedItemsSizeChanged```
+
+Let's take look a small sample for seekbar:
 ```
 seekBar.onPinPositionChanged = { index, pinValue ->
     println("$pinValue $index")
@@ -74,7 +81,24 @@ seekBar.onSelectedItemsSizeChanged = { selectedItemsSize ->
     println("$selectedEntriesSize elements was selected")
 }
 ```
-
+And for rangebar:
+```
+rangeBar.onRangeChanged = { leftPinValue, rightPinValue ->
+    println("$leftPinValue $rightPinValue")
+}
+rangeBar.onLeftPinChanged = { index, leftPinValue ->
+    println("$index $leftPinValue")
+}
+rangeBar.onRightPinChanged = { index, rightPinValue ->
+    println("$index $rightPinValue")
+}
+rangeBar.onSelectedEntriesSizeChanged = { selectedEntriesSize ->
+    println("$selectedEntriesSize")
+}
+rangeBar.onSelectedItemsSizeChanged = { selectedItemsSize ->
+    println("$selectedItemsSize elements was selected")
+}
+```
 ## License
 ```
 Copyright 2018 stfalcon.com
