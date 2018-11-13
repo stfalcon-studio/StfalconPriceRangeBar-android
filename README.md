@@ -33,14 +33,14 @@ seekBarEntries.add(SeekBarEntry(40.0f, 15.0f))
 seekBar.setEntries(seekBarEntries)
 ```
 You can use many attributes for more flexibility and convenience of use. Here's the full list:
-- seekActiveLineColor 
-- seekActiveThumbColor
-- seekActiveTickRadius
-- seekChartSelectedBackgroundColor
-- seekChartSelectedLineColor
-- seekChartUnSelectedLineColor
-- seekChartUnselectedBackgroundColor
-- seekLineColor
+- barActiveLineColor - color of selected part of rangebar/seekbar
+- barLineColor - color of unselected part of rangebar/seekbar
+- barThumbColor - color of thumb
+- barActiveTickRadius - clicked size of thumb
+- barChartSelectedBackgroundColor - color of selected part of chart
+- barChartSelectedLineColor - color of selected part of top line in chart
+- barChartUnSelectedLineColor - color of unelected part of top line in chart
+- barChartUnselectedBackgroundColor
 
 For example:
 ```
@@ -75,10 +75,10 @@ seekBar.onPinPositionChanged = { index, pinValue ->
     println("$pinValue $index")
 }
 seekBar.onSelectedEntriesSizeChanged = { selectedEntriesSize ->
-    println("$selectedEntriesSize")
+    println("$selectedEntriesSize column was selected")
 }
 seekBar.onSelectedItemsSizeChanged = { selectedItemsSize ->
-    println("$selectedEntriesSize elements was selected")
+    println("selectedItemsSize elements was selected")
 }
 ```
 And for rangebar:
@@ -93,7 +93,7 @@ rangeBar.onRightPinChanged = { index, rightPinValue ->
     println("$index $rightPinValue")
 }
 rangeBar.onSelectedEntriesSizeChanged = { selectedEntriesSize ->
-    println("$selectedEntriesSize")
+    println("$selectedEntriesSize column was selected")
 }
 rangeBar.onSelectedItemsSizeChanged = { selectedItemsSize ->
     println("$selectedItemsSize elements was selected")
