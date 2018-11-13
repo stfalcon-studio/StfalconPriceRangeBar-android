@@ -30,31 +30,31 @@ class SeekBarWithChart @JvmOverloads constructor(
     /**
      * Background color of selected part in chart
      * */
-    private var chartSelectedBackgroundColor: Int =
+    var chartSelectedBackgroundColor: Int =
         ContextCompat.getColor(context, R.color.colorChartSelected)
 
     /**
      * Background color of not selected part in chart
      * */
-    private var chartUnselectedBackgroundColor: Int =
+    var chartUnselectedBackgroundColor: Int =
         ContextCompat.getColor(context, R.color.colorChartUnselected)
 
     /**
      * Color of selected line part in chart
      * */
-    private var chartSelectedLineColor: Int =
+    var chartSelectedLineColor: Int =
         ContextCompat.getColor(context, R.color.colorChartSelectedLine)
 
     /**
      * Color of not selected line part in chart
      * */
-    private var chartUnSelectedLineColor: Int =
+    var chartUnSelectedLineColor: Int =
         ContextCompat.getColor(context, R.color.colorChartUnselectedLine)
 
     /**
      * Color of selected part of seekbar
      * */
-    private var selectedSeekColor: Int = ContextCompat.getColor(context, R.color.colorRangeSelected)
+    var selectedSeekColor: Int = ContextCompat.getColor(context, R.color.colorRangeSelected)
         set(value) {
             field = value
             applySeekBarStyle()
@@ -63,7 +63,7 @@ class SeekBarWithChart @JvmOverloads constructor(
     /**
      * Color of not selected part of seekbar
      * */
-    private var unselectedSeekColor: Int =
+    var unselectedSeekColor: Int =
         ContextCompat.getColor(context, R.color.colorChartUnselectedLine)
         set(value) {
             field = value
@@ -73,7 +73,7 @@ class SeekBarWithChart @JvmOverloads constructor(
     /**
      * Color of active thumb in seekbar
      * */
-    private var thumbColor: Int = ContextCompat.getColor(context, R.color.colorRangeSelected)
+    var thumbColor: Int = ContextCompat.getColor(context, R.color.colorRangeSelected)
         set(value) {
             field = value
             applySeekBarStyle()
@@ -82,7 +82,7 @@ class SeekBarWithChart @JvmOverloads constructor(
     /**
      * Color of active thumb in seekbar
      * */
-    private var thumbActiveColor: Int = ContextCompat.getColor(context, R.color.colorRangeSelected)
+    var thumbActiveColor: Int = ContextCompat.getColor(context, R.color.colorRangeSelected)
         set(value) {
             field = value
             applySeekBarStyle()
@@ -91,7 +91,7 @@ class SeekBarWithChart @JvmOverloads constructor(
     /**
      * Radius of active tick in seekbar
      * */
-    private var tickRadius: Float =
+    var tickRadius: Float =
         resources.getDimensionPixelSize(R.dimen.default_active_tick_radius).toFloat()
         set(value) {
             field = value
