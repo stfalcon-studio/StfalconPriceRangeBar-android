@@ -36,11 +36,12 @@ You can use many attributes for more flexibility and convenience of use. Here's 
 - barActiveLineColor - color of selected part of rangebar/seekbar
 - barLineColor - color of unselected part of rangebar/seekbar
 - barThumbColor - color of thumb
+- barActiveThumbColor - color of active radius in thumb
 - barActiveTickRadius - clicked size of thumb
-- barChartSelectedBackgroundColor - color of selected part of chart
+- barChartSelectedBackgroundColor - background color of selected part of chart
 - barChartSelectedLineColor - color of selected part of top line in chart
 - barChartUnSelectedLineColor - color of unelected part of top line in chart
-- barChartUnselectedBackgroundColor
+- barChartUnselectedBackgroundColor - background color of unelected part of chart
 
 For example:
 ```
