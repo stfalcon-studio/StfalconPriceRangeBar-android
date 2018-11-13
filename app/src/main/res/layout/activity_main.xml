@@ -63,6 +63,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="21dp"
             app:layout_constraintTop_toBottomOf="@+id/seekbarAreaInfo"
+            app:barActiveTickRadius="@dimen/custom_active_tick_radius"
             app:barActiveLineColor="@android:color/holo_orange_dark"
             app:barLineColor="@android:color/holo_blue_light"
             app:barThumbColor="@android:color/black"
@@ -70,10 +71,7 @@
             app:barChartSelectedBackgroundColor="@android:color/holo_red_dark"
             app:barChartSelectedLineColor="@android:color/holo_green_dark"
             app:barChartUnSelectedLineColor="@android:color/holo_green_light"
-            app:barChartUnselectedBackgroundColor="@android:color/holo_red_light"
-            />
-
-        <!--app:barActiveTickRadius="@dimen/custom_active_tick_radius"-->
+            app:barChartUnselectedBackgroundColor="@android:color/holo_red_light" />
 
         <TextView
             android:id="@+id/rangeBarTitle"
