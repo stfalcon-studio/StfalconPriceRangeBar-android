@@ -10,33 +10,20 @@ class FixtureUtils {
             val entries: ArrayList<BarEntry> = ArrayList()
 
             val array = arrayOf(
-                BarEntry(30.0f, 5.0f), BarEntry(32.0f, 5.0f), BarEntry(34.0f, 10.0f),
-                BarEntry(36.0f, 10.0f), BarEntry(38.0f, 11.0f), BarEntry(40.0f, 11.0f),
-                BarEntry(42.0f, 15.0f), BarEntry(44.0f, 15.0f), BarEntry(46.0f, 20.0f),
-                BarEntry(48.0f, 20.0f), BarEntry(50.0f, 21.0f), BarEntry(52.0f, 21.0f),
-                BarEntry(54.0f, 20.0f), BarEntry(56.0f, 19.0f), BarEntry(58.0f, 21.0f),
-                BarEntry(60.0f, 22.0f), BarEntry(62.0f, 23.0f), BarEntry(64.0f, 22.0f),
-                BarEntry(66.0f, 23.0f), BarEntry(68.0f, 24.0f), BarEntry(70.0f, 23.0f),
-                BarEntry(72.0f, 23.0f), BarEntry(74.0f, 26.0f), BarEntry(76.0f, 26.0f),
-                BarEntry(78.0f, 29.0f), BarEntry(80.0f, 29.0f), BarEntry(82.0f, 30.0f),
-                BarEntry(84.0f, 30.0f), BarEntry(86.0f, 32.0f), BarEntry(88.0f, 32.0f),
-                BarEntry(90.0f, 38.0f), BarEntry(92.0f, 38.0f), BarEntry(94.0f, 40.0f),
-                BarEntry(96.0f, 40.0f), BarEntry(98.0f, 37.0f), BarEntry(100.0f, 37.0f),
-                BarEntry(102.0f, 37.0f), BarEntry(104.0f, 37.0f), BarEntry(106.0f, 33.0f),
-                BarEntry(108.0f, 33.0f), BarEntry(110.0f, 28.0f), BarEntry(112.0f, 28.0f),
-                BarEntry(114.0f, 23.0f), BarEntry(116.0f, 23.0f), BarEntry(118.0f, 22.0f),
-                BarEntry(120.0f, 22.0f), BarEntry(122.0f, 17.0f), BarEntry(124.0f, 17.0f),
-                BarEntry(126.0f, 16.0f), BarEntry(128.0f, 14.0f), BarEntry(130.0f, 13.0f),
-                BarEntry(132.0f, 11.0f), BarEntry(134.0f, 10.0f), BarEntry(136.0f, 9.0f),
-                BarEntry(138.0f, 9.0f), BarEntry(140.0f, 8.0f), BarEntry(142.0f, 7.0f),
-                BarEntry(144.0f, 7.0f), BarEntry(146.0f, 8.0f), BarEntry(148.0f, 6.0f),
-                BarEntry(150.0f, 6.0f), BarEntry(152.0f, 5.0f), BarEntry(154.0f, 5.0f),
-                BarEntry(156.0f, 6.0f), BarEntry(158.0f, 6.0f), BarEntry(160.0f, 4.0f),
-                BarEntry(162.0f, 2.0f), BarEntry(164.0f, 2.0f), BarEntry(166.0f, 3.0f),
-                BarEntry(168.0f, 4.0f), BarEntry(170.0f, 3.0f), BarEntry(172.0f, 2.0f),
-                BarEntry(174.0f, 1.0f), BarEntry(176.0f, 1.0f), BarEntry(178.0f, 0.0f),
-                BarEntry(180.0f, 0.0f), BarEntry(182.0f, 0.0f), BarEntry(184.0f, 0.0f)
-            )
+                30.0f to 5.0f, 32.0f to 5.0f, 34.0f to 10.0f, 36.0f to 10.0f, 38.0f to 11.0f, 40.0f to 11.0f,
+                42.0f to 15.0f, 44.0f to 15.0f, 46.0f to 20.0f, 48.0f to 20.0f, 50.0f to 21.0f, 52.0f to 21.0f,
+                54.0f to 20.0f, 56.0f to 19.0f, 58.0f to 21.0f, 60.0f to 22.0f, 62.0f to 23.0f, 64.0f to 22.0f,
+                66.0f to 23.0f, 68.0f to 24.0f, 70.0f to 23.0f, 72.0f to 23.0f, 74.0f to 26.0f, 76.0f to 26.0f,
+                78.0f to 29.0f, 80.0f to 29.0f, 82.0f to 30.0f, 84.0f to 30.0f, 86.0f to 32.0f, 88.0f to 32.0f,
+                90.0f to 38.0f, 92.0f to 38.0f, 94.0f to 40.0f, 96.0f to 40.0f, 98.0f to 37.0f, 100.0f to 37.0f,
+                102.0f to 37.0f, 104.0f to 37.0f, 106.0f to 33.0f, 108.0f to 33.0f, 110.0f to 28.0f, 112.0f to 28.0f,
+                114.0f to 23.0f, 116.0f to 23.0f, 118.0f to 22.0f, 120.0f to 22.0f, 122.0f to 17.0f, 124.0f to 17.0f,
+                126.0f to 16.0f, 128.0f to 14.0f, 130.0f to 13.0f, 132.0f to 11.0f, 134.0f to 10.0f, 136.0f to 9.0f,
+                138.0f to 9.0f, 140.0f to 8.0f, 142.0f to 7.0f, 144.0f to 7.0f, 146.0f to 8.0f, 148.0f to 6.0f,
+                150.0f to 6.0f, 152.0f to 5.0f, 154.0f to 5.0f, 156.0f to 6.0f, 158.0f to 6.0f, 160.0f to 4.0f,
+                162.0f to 2.0f, 164.0f to 2.0f, 166.0f to 3.0f, 168.0f to 4.0f, 170.0f to 3.0f, 172.0f to 2.0f,
+                174.0f to 1.0f, 176.0f to 1.0f, 178.0f to 0.0f, 180.0f to 0.0f, 182.0f to 0.0f, 184.0f to 0.0f
+            ).map { BarEntry(it.first, it.second) }
 
             entries.addAll(array)
             return entries
@@ -44,35 +31,22 @@ class FixtureUtils {
 
         fun prepareAreaFixtures(): ArrayList<BarEntry> {
             val entries: ArrayList<BarEntry> = ArrayList()
-
             val array = arrayOf(
-                BarEntry(30.0f, 5.0f), BarEntry(32.0f, 5.0f), BarEntry(35.0f, 10.0f),
-                BarEntry(38.0f, 10.0f), BarEntry(40.0f, 11.0f), BarEntry(42.0f, 11.0f),
-                BarEntry(45.0f, 15.0f), BarEntry(48.0f, 15.0f), BarEntry(50.0f, 20.0f),
-                BarEntry(52.0f, 20.0f), BarEntry(55.0f, 21.0f), BarEntry(58.0f, 21.0f),
-                BarEntry(60.0f, 20.0f), BarEntry(62.0f, 19.0f), BarEntry(65.0f, 21.0f),
-                BarEntry(68.0f, 22.0f), BarEntry(70.0f, 23.0f), BarEntry(72.0f, 22.0f),
-                BarEntry(75.0f, 23.0f), BarEntry(78.0f, 24.0f), BarEntry(80.0f, 23.0f),
-                BarEntry(82.0f, 23.0f), BarEntry(85.0f, 26.0f), BarEntry(88.0f, 26.0f),
-                BarEntry(90.0f, 29.0f), BarEntry(92.0f, 29.0f), BarEntry(95.0f, 30.0f),
-                BarEntry(98.0f, 30.0f), BarEntry(100.0f, 32.0f), BarEntry(102.0f, 32.0f),
-                BarEntry(105.0f, 38.0f), BarEntry(108.0f, 38.0f), BarEntry(110.0f, 40.0f),
-                BarEntry(112.0f, 40.0f), BarEntry(115.0f, 37.0f), BarEntry(118.0f, 37.0f),
-                BarEntry(120.0f, 37.0f), BarEntry(122.0f, 37.0f), BarEntry(125.0f, 33.0f),
-                BarEntry(128.0f, 33.0f), BarEntry(130.0f, 28.0f), BarEntry(132.0f, 28.0f),
-                BarEntry(135.0f, 23.0f), BarEntry(138.0f, 23.0f), BarEntry(140.0f, 22.0f),
-                BarEntry(142.0f, 22.0f), BarEntry(145.0f, 17.0f), BarEntry(148.0f, 17.0f),
-                BarEntry(150.0f, 16.0f), BarEntry(152.0f, 14.0f), BarEntry(155.0f, 13.0f),
-                BarEntry(158.0f, 11.0f), BarEntry(160.0f, 10.0f), BarEntry(162.0f, 9.0f),
-                BarEntry(165.0f, 9.0f), BarEntry(168.0f, 8.0f), BarEntry(170.0f, 7.0f),
-                BarEntry(172.0f, 7.0f), BarEntry(175.0f, 8.0f), BarEntry(178.0f, 6.0f),
-                BarEntry(180.0f, 6.0f), BarEntry(182.0f, 5.0f), BarEntry(185.0f, 5.0f),
-                BarEntry(188.0f, 6.0f), BarEntry(190.0f, 6.0f), BarEntry(192.0f, 4.0f),
-                BarEntry(195.0f, 2.0f), BarEntry(198.0f, 2.0f), BarEntry(200.0f, 3.0f),
-                BarEntry(202.0f, 4.0f), BarEntry(205.0f, 3.0f), BarEntry(208.0f, 2.0f),
-                BarEntry(210.0f, 1.0f), BarEntry(212.0f, 1.0f), BarEntry(215.0f, 0.0f),
-                BarEntry(218.0f, 0.0f), BarEntry(220.0f, 0.0f), BarEntry(222.0f, 0.0f)
-            )
+                30.0f to  5.0f, 32.0f to  5.0f, 35.0f to 10.0f, 38.0f to 10.0f, 40.0f to 11.0f, 42.0f to 11.0f,
+                45.0f to 15.0f, 48.0f to 15.0f, 50.0f to 20.0f, 52.0f to 20.0f, 55.0f to 21.0f, 58.0f to 21.0f,
+                60.0f to 20.0f, 62.0f to 19.0f, 65.0f to 21.0f, 68.0f to 22.0f, 70.0f to 23.0f, 72.0f to 22.0f,
+                75.0f to 23.0f, 78.0f to 24.0f, 80.0f to 23.0f, 82.0f to 23.0f, 85.0f to 26.0f, 88.0f to 26.0f,
+                90.0f to 29.0f, 92.0f to 29.0f, 95.0f to 30.0f, 98.0f to 30.0f, 100.0f to 32.0f, 102.0f to 32.0f,
+                105.0f to 38.0f, 108.0f to 38.0f, 110.0f to 40.0f, 112.0f to 40.0f, 115.0f to 37.0f, 118.0f to 37.0f,
+                120.0f to 37.0f, 122.0f to 37.0f, 125.0f to 33.0f, 128.0f to 33.0f, 130.0f to 28.0f, 132.0f to 28.0f,
+                135.0f to 23.0f, 138.0f to 23.0f, 140.0f to 22.0f, 142.0f to 22.0f, 145.0f to 17.0f, 148.0f to 17.0f,
+                150.0f to 16.0f, 152.0f to 14.0f, 155.0f to 13.0f, 158.0f to 11.0f, 160.0f to 10.0f, 162.0f to 9.0f,
+                165.0f to  9.0f, 168.0f to  8.0f, 170.0f to 7.0f,  172.0f to  7.0f, 175.0f to  8.0f, 178.0f to 6.0f,
+                180.0f to  6.0f, 182.0f to  5.0f, 185.0f to 5.0f,  188.0f to  6.0f, 190.0f to  6.0f, 192.0f to 4.0f,
+                195.0f to  2.0f, 198.0f to  2.0f, 200.0f to 3.0f,  202.0f to  4.0f, 205.0f to  3.0f, 208.0f to 2.0f,
+                210.0f to  1.0f, 212.0f to  1.0f, 215.0f to 0.0f,  218.0f to  0.0f, 220.0f to  0.0f, 222.0f to 0.0f
+            ).map { BarEntry(it.first, it.second)  }
+
 
             entries.addAll(array)
             return entries
