@@ -20,10 +20,12 @@ class RangeBarWithChart @JvmOverloads constructor(
     SimpleRangeView.OnTrackRangeListener {
 
     private var entries: ArrayList<Entry> = ArrayList()
-    private var leftUnselectedDataSet: ArrayList<Entry> = ArrayList()
+    private var leftUnselectedDataSet = ArrayList<Entry>()//FIXME
     private var rightUnselectedDataSet: ArrayList<Entry> = ArrayList()
     private var selectedDataSet: ArrayList<Entry> = ArrayList()
     private var mainData: LineData? = null
+
+    //fixme move to bottom
 
     var onLeftPinChanged: ((index: Int, leftPinValue: String?) -> Unit)? = null
     var onRangeChanged: ((leftPinValue: String?, rightPinValue: String?) -> Unit)? = null

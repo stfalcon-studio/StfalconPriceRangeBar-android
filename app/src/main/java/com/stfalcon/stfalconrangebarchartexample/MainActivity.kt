@@ -1,15 +1,16 @@
 package com.stfalcon.stfalconrangebarchartexample
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import com.stfalcon.pricerangebar.model.SeekBarEntry
 import com.stfalcon.stfalconrangebarchartexample.fixture.FixtureUtils
 import kotlinx.android.synthetic.main.activity_main.*
-import java.util.ArrayList
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
-    private var seekBarEntries: ArrayList<SeekBarEntry> = ArrayList()
+
+    private var seekBarEntries =  ArrayList<SeekBarEntry>()//FIXME ->
     private var rangeBarEntries: ArrayList<SeekBarEntry> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,7 +30,7 @@ class MainActivity : AppCompatActivity() {
     private fun initSeekBar() {
         seekBar.setEntries(seekBarEntries)
         seekBar.onPinPositionChanged = { index, pinValue ->
-            seekbarAreaValue.text = "$pinValue m"
+            seekbarAreaValue.text = "$pinValue m" //Fixme MOVE this to strings. I know that it is just sample, but it will look better
         }
         seekBar.onSelectedEntriesSizeChanged = { selectedEntriesSize ->
             println("$selectedEntriesSize")
@@ -52,7 +53,7 @@ class MainActivity : AppCompatActivity() {
     private fun initRangeBar() {
         rangeBar.setEntries(rangeBarEntries)
         rangeBar.onRangeChanged = { leftPinValue, rightPinValue ->
-            rangeBarValue.text = getString(R.string.area_range, leftPinValue, rightPinValue)
+            rangeBarValue.text = getString(R.string.area_range, leftPinValue, rightPinValue)//Fixme Here you added strings :)
         }
         rangeBar.onLeftPinChanged = { index, leftPinValue ->
             println("$index $leftPinValue")

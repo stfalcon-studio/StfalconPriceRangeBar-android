@@ -18,6 +18,7 @@ class SeekBarWithChart @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr), SimpleRangeView.OnTrackRangeListener {
 
+    //FIXME the same problem like in previous class
     private var entries: ArrayList<Entry> = ArrayList()
     private var unselectedDataSet: ArrayList<Entry> = ArrayList()
     private var selectedDataSet: ArrayList<Entry> = ArrayList()
