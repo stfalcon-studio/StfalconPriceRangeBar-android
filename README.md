@@ -5,7 +5,7 @@
 Need iOS and Android apps, MVP development or prototyping? Contact us via info@stfalcon.com. We develop software since 2009, and we're known experts in this field. Check out our portfolio and see more libraries from stfalcon-studio.
 ## Download
 Download via Gradle: 
-```compile 'com.github.stfalcon:StfalconPriceRangeBar:0.1.0'```
+```implementation 'com.github.stfalcon:StfalconPriceRangeBar:0.1.0'```
 ## Usage
 For adding default seekbar with chart just put this code into your layout:
 ```
@@ -22,16 +22,16 @@ Or you can use default rangebar with chart just put this code into your layout:
 After that you should to add list entries with data to displaying
 
 ```
-val seekBarEntries = ArrayList<SeekBarEntry>()
+val barEntrys = ArrayList<BarEntry>()
 
-seekBarEntries.add(SeekBarEntry(30.0f, 5.0f))
-seekBarEntries.add(SeekBarEntry(32.0f, 7.0f))
-seekBarEntries.add(SeekBarEntry(34.0f, 10.0f))
-seekBarEntries.add(SeekBarEntry(36.0f, 11.0f))
-seekBarEntries.add(SeekBarEntry(38.0f, 14.0f))
-seekBarEntries.add(SeekBarEntry(40.0f, 15.0f))
+seekBarEntries.add(BarEntry(30.0f, 5.0f))
+seekBarEntries.add(BarEntry(32.0f, 7.0f))
+seekBarEntries.add(BarEntry(34.0f, 10.0f))
+seekBarEntries.add(BarEntry(36.0f, 11.0f))
+seekBarEntries.add(BarEntry(38.0f, 14.0f))
+seekBarEntries.add(BarEntry(40.0f, 15.0f))
 
-seekBar.setEntries(seekBarEntries)
+seekBar.setEntries(barEntrys)
 ```
 You can use many attributes for more flexibility and convenience of use. Here's the full list:
 - barActiveLineColor - color of selected part of rangebar/seekbar
