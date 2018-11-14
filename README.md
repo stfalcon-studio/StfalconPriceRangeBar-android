@@ -50,14 +50,14 @@ For example:
     android:id="@+id/seekBar"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:seekActiveLineColor="@android:color/holo_orange_dark"
-    app:seekActiveThumbColor="@android:color/holo_blue_light"
-    app:seekActiveTickRadius="@dimen/custom_active_tick_radius"
-    app:seekChartSelectedBackgroundColor="@android:color/holo_red_dark"
-    app:seekChartSelectedLineColor="@android:color/holo_green_dark"
-    app:seekChartUnSelectedLineColor="@android:color/holo_green_light"
-    app:seekChartUnselectedBackgroundColor="@android:color/holo_red_light"
-    app:seekLineColor="@android:color/holo_blue_light"/>
+    app:barActiveLineColor="@android:color/holo_orange_dark"
+    app:barActiveThumbColor="@android:color/holo_blue_light"
+    app:barActiveTickRadius="@dimen/custom_active_tick_radius"
+    app:barChartSelectedBackgroundColor="@android:color/holo_red_dark"
+    app:barChartSelectedLineColor="@android:color/holo_green_dark"
+    app:barChartUnSelectedLineColor="@android:color/holo_green_light"
+    app:barChartUnselectedBackgroundColor="@android:color/holo_red_light"
+    app:barLineColor="@android:color/holo_blue_light"/>
 ```
 If you want to observe any changes in seekbar you should to add callbacks like:
 - ```onPinPositionChanged```
