@@ -18,6 +18,7 @@ package com.stfalcon.pricerangebar
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.animation.ValueAnimator
+import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.*
 import android.os.Parcel
@@ -1020,6 +1021,7 @@ class SimpleRangeView @JvmOverloads constructor(
 
         internal constructor(superState: Parcelable) : super(superState)
 
+        @SuppressLint("NewApi")
         private constructor(input: Parcel, classLoader: ClassLoader) : super(input, classLoader) {
             this.labelColor = input.readInt()
             this.activeLabelColor = input.readInt()

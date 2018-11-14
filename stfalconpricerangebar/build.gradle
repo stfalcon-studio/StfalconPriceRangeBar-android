@@ -1,6 +1,8 @@
+apply plugin: 'com.novoda.bintray-release'
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'maven-publish'
 
 android {
     compileSdkVersion 28
@@ -22,6 +24,38 @@ android {
         }
     }
 
+}
+
+publish {
+    repoName = 'StfalconPriceRangeBar'
+    groupId = 'com.github.stfalcon'
+    artifactId = 'StfalconPriceRangeBar'
+    publishVersion = '0.1.0'
+    desc = 'A library that helps with a few lines of code, use the rangebar with chart and customize it as you need it.'
+    licences = ['Apache-2.0']
+    uploadName='StfalconPriceRangeBar'
+    website = 'https://github.com/stfalcon-studio/StfalconPriceRangeBar-android.git'
+
+    task sourceJar(type: Jar) {
+        from android.sourceSets.main.java.srcDirs
+        classifier "sources"
+    }
+
+    publishing {
+        publications {
+            MyPub(MavenPublication) {
+                groupId 'com.github.stfalcon'
+                artifactId 'StfalconPriceRangeBar'
+                version '0.1.0'
+
+                artifact bundleReleaseAar
+                artifact(sourceJar)
+            }
+        }
+    }
+
+    //don't forget to add your custom publication
+    publications = ['MyPub']
 }
 
 dependencies {
