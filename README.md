@@ -1,5 +1,5 @@
 # Stfalcon-PriceRangeBar
-<img src="images/pricerangebar.gif" width="240" height="420" />
+![](https://i.imgur.com/Ztu6kKp.gif)
 
 # Demo Application
 <a href="https://play.google.com/store/apps/details?id=com.stfalcon.stfalconrangebarchart_example" rel="nofollow"><img src="https://camo.githubusercontent.com/0a801b51f6ca951ae0c7dabf4368bf6a4d8c130f/68747470733a2f2f706c61792e676f6f676c652e636f6d2f696e746c2f656e5f75732f6261646765732f696d616765732f62616467655f6e65772e706e67" alt="Get it on Google Play" data-canonical-src="https://play.google.com/intl/en_us/badges/images/badge_new.png" style="max-width:100%;"></a>
