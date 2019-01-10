@@ -11,20 +11,20 @@ Download via Gradle:
 ```implementation 'com.github.stfalcon:StfalconPriceRangeBar:0.1.0'```
 ## Usage
 For adding default seekbar with chart just put this code into your layout:
-```
+``` xml
 <com.stfalcon.pricerangebar.SeekBarWithChart
    android:layout_width="match_parent"
    android:layout_height="wrap_content"/>
 ```
 Or you can use default rangebar with chart just put this code into your layout:
-```
+``` xml
 <com.stfalcon.pricerangebar.RangeBarWithChart
    android:layout_width="match_parent"
    android:layout_height="wrap_content"/>
 ```
 After that you should to add list entries with data to displaying
 
-```
+``` kotlin
 val barEntrys = ArrayList<BarEntry>()
 
 seekBarEntries.add(BarEntry(30.0f, 5.0f))
@@ -48,7 +48,7 @@ You can use many attributes for more flexibility and convenience of use. Here's 
 - barChartUnselectedBackgroundColor - background color of unelected part of chart
 
 For example:
-```
+``` xml
 <com.stfalcon.pricerangebar.SeekBarWithChart
     android:id="@+id/seekBar"
     android:layout_width="match_parent"
@@ -75,7 +75,7 @@ If you want to observe any changes in rangebar you should to add callbacks like:
 - ```onSelectedItemsSizeChanged```
 
 Let's take look a small sample for seekbar:
-```
+``` kotlin
 seekBar.onPinPositionChanged = { index, pinValue ->
     println("$pinValue $index")
 }
@@ -87,7 +87,7 @@ seekBar.onSelectedItemsSizeChanged = { selectedItemsSize ->
 }
 ```
 And for rangebar:
-```
+``` kotlin
 rangeBar.onRangeChanged = { leftPinValue, rightPinValue ->
     println("$leftPinValue $rightPinValue")
 }
