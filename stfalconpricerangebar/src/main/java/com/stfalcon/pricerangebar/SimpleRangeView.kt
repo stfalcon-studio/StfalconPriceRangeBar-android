@@ -23,15 +23,15 @@ import android.content.Context
 import android.graphics.*
 import android.os.Parcel
 import android.os.Parcelable
-import android.support.v4.view.ViewCompat
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
+import androidx.core.view.ViewCompat
 import com.stfalcon.pricerangebar.extension.convertable
 import kotlin.properties.Delegates
 import kotlin.properties.ReadWriteProperty
 
-class SimpleRangeView @JvmOverloads constructor(
+open class SimpleRangeView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0

@@ -1,14 +1,13 @@
 package com.stfalcon.stfalconrangebarchartexample
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.stfalcon.pricerangebar.model.BarEntry
 import com.stfalcon.stfalconrangebarchartexample.fixture.FixtureUtils
 import kotlinx.android.synthetic.main.activity_main.*
-import java.util.*
+import java.util.ArrayList
 
 class MainActivity : AppCompatActivity() {
-
 
     private var seekBarEntries = ArrayList<BarEntry>()
     private var rangeBarEntries = ArrayList<BarEntry>()
@@ -38,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         }
         seekBar.onSelectedItemsSizeChanged = { selectedItemsSize ->
             seekbarAreaInfo.text =
-                    getString(R.string.formatter_elements, selectedItemsSize.toString())
+                getString(R.string.formatter_elements, selectedItemsSize.toString())
         }
 
         val perimetr = seekBarEntries.last().x
