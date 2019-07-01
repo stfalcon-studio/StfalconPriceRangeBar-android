@@ -34,8 +34,9 @@ android {
 publish {
     repoName = 'StfalconPriceRangeBar'
     groupId = 'com.github.stfalcon'
+    group='com.github.stfalcon'
     artifactId = 'StfalconPriceRangeBar'
-    publishVersion = '0.1.0'
+    publishVersion = '0.1.1'
     desc = 'A library that helps with a few lines of code, use the rangebar with chart and customize it as you need it.'
     licences = ['Apache-2.0']
     uploadName='StfalconPriceRangeBar'
@@ -49,11 +50,13 @@ publish {
     publishing {
         publications {
             MyPub(MavenPublication) {
+                userOrg = 'stfalcon.com'
                 groupId 'com.github.stfalcon'
                 artifactId 'StfalconPriceRangeBar'
-                version '0.1.0'
+                version '0.1.1'
 
-                artifact bundleReleaseAar
+                //artifact bundleReleaseAar
+                artifact("$buildDir/outputs/aar/stfalconpricerangebar-release.aar")
                 artifact(sourceJar)
             }
         }
