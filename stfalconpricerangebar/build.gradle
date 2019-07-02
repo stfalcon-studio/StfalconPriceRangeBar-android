@@ -47,23 +47,15 @@ publish {
         classifier "sources"
     }
 
-    publishing {
-        publications {
-            MyPub(MavenPublication) {
-                userOrg = 'stfalcon.com'
-                groupId 'com.github.stfalcon'
-                artifactId 'StfalconPriceRangeBar'
-                version '0.1.1'
-
-                //artifact bundleReleaseAar
-                artifact("$buildDir/outputs/aar/stfalconpricerangebar-release.aar")
-                artifact(sourceJar)
-            }
-        }
+    publish {
+        userOrg = ''
+        groupId = 'com.github.stfalcon'
+        artifactId = 'StfalconPriceRangeBar'
+        publishVersion = '0.1.1'
+        version '0.1.1'
+        desc = 'Android library for adding price range with chart like in airbnb with flexible customization.'
+        website = 'https://github.com/stfalcon-studio/StfalconPriceRangeBar-android'
     }
-
-    //don't forget to add your custom publication
-    publications = ['MyPub']
 }
 
 dependencies {
