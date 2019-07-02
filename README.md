@@ -9,6 +9,9 @@ Need iOS and Android apps, MVP development or prototyping? Contact us via info@s
 ## Download
 Download via Gradle: 
 ```implementation 'com.github.stfalcon:StfalconPriceRangeBar:0.1.1'```
+
+0.1.1 - added androidx support
+
 ## Usage
 For adding default seekbar with chart just put this code into your layout:
 ``` xml
