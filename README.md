@@ -100,6 +100,21 @@ rangeBar.onSelectedItemsSizeChanged = { selectedItemsSize ->
     println("$selectedItemsSize elements was selected")
 }
 ```
+## How to use in Java?
+We need init all views and variables 
+```
+private static final String TAG = "Sample";
+
+    private ArrayList<BarEntry> seekBarEntries;
+    private ArrayList<BarEntry> rangeBarEntries;
+
+    private SeekBarWithChart seekBar;
+    private RangeBarWithChart rangeBar;
+    private TextView seekBarAreaInfo;
+    private TextView seekbarAreaValue;
+    private TextView rangeBarValue;
+    private TextView rangeBarInfo;
+```
 ## License
 ```
 Copyright 2018 stfalcon.com
