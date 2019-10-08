@@ -124,25 +124,27 @@ seekbarAreaValue = findViewById(R.id.seekbarAreaValue);
 rangeBarValue = findViewById(R.id.rangeBarValue);
 rangeBarInfo = findViewById(R.id.rangeBarInfo);
 ```
-###Seekbar
+**SeekBar**
+
 ```
 private void initSeekBar() {
    seekBar.setEntries(seekBarEntries);
    seekBar.setOnPinPositionChanged(this::onPinPositionChanged);
    seekBar.setOnSelectedEntriesSizeChanged(this::onSelectedEntriesSizeChanged);
    seekBar.setOnSelectedItemsSizeChanged(this::onSelectedItemsSizeChanged);
-   
+
    float perimeter = seekBarEntries.get(seekBarEntries.size() - 1).getX();
    seekbarAreaValue.setText(getString(R.string.formatter_meter, Float.toString(perimeter)));
-   
+
    int totalSelectedSize = 0;
    for (BarEntry entry : seekBarEntries) {
        totalSelectedSize += entry.getY();
-   
-   
+
+
    seekBarAreaInfo.setText(getString(R.string.formatter_elements, Float.toString(totalSelectedSize)));
-}```
-###RangeBar
+}
+```
+**RangeBar**
 ```
 private void initRangeBar() {
    rangeBar.setEntries(rangeBarEntries);
