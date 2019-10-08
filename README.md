@@ -101,19 +101,69 @@ rangeBar.onSelectedItemsSizeChanged = { selectedItemsSize ->
 }
 ```
 ## How to use in Java?
-We need init all views and variables 
-```
+We need init all views and variables
+```Java
 private static final String TAG = "Sample";
 
-    private ArrayList<BarEntry> seekBarEntries;
-    private ArrayList<BarEntry> rangeBarEntries;
+private ArrayList<BarEntry> seekBarEntries;
+private ArrayList<BarEntry> rangeBarEntries;
 
-    private SeekBarWithChart seekBar;
-    private RangeBarWithChart rangeBar;
-    private TextView seekBarAreaInfo;
-    private TextView seekbarAreaValue;
-    private TextView rangeBarValue;
-    private TextView rangeBarInfo;
+private SeekBarWithChart seekBar;
+private RangeBarWithChart rangeBar;
+private TextView seekBarAreaInfo;
+private TextView seekbarAreaValue;
+private TextView rangeBarValue;
+private TextView rangeBarInfo;
+
+...
+
+seekBar = findViewById(R.id.seekBar);
+rangeBar = findViewById(R.id.rangeBar);
+seekBarAreaInfo = findViewById(R.id.seekbarAreaInfo);
+seekbarAreaValue = findViewById(R.id.seekbarAreaValue);
+rangeBarValue = findViewById(R.id.rangeBarValue);
+rangeBarInfo = findViewById(R.id.rangeBarInfo);
+```
+###Seekbar
+```
+private void initSeekBar() {
+   seekBar.setEntries(seekBarEntries);
+   seekBar.setOnPinPositionChanged(this::onPinPositionChanged);
+   seekBar.setOnSelectedEntriesSizeChanged(this::onSelectedEntriesSizeChanged);
+   seekBar.setOnSelectedItemsSizeChanged(this::onSelectedItemsSizeChanged);
+   
+   float perimeter = seekBarEntries.get(seekBarEntries.size() - 1).getX();
+   seekbarAreaValue.setText(getString(R.string.formatter_meter, Float.toString(perimeter)));
+   
+   int totalSelectedSize = 0;
+   for (BarEntry entry : seekBarEntries) {
+       totalSelectedSize += entry.getY();
+   
+   
+   seekBarAreaInfo.setText(getString(R.string.formatter_elements, Float.toString(totalSelectedSize)));
+}```
+###RangeBar
+```
+private void initRangeBar() {
+   rangeBar.setEntries(rangeBarEntries);
+   rangeBar.setOnRangeChanged(this::onRangeChanged);
+   rangeBar.setOnLeftPinChanged(this::onLeftPinChanged);
+   rangeBar.setOnRightPinChanged(this::onRightPinChanged);
+   rangeBar.setOnSelectedEntriesSizeChanged(this::onSelectedRangeEntriesSizeChanged);
+   rangeBar.setOnSelectedItemsSizeChanged(this::onRangeSelectedItemsSizeChanged);
+   int totalSelectedSize = 0;
+   for (BarEntry entry : rangeBarEntries) {
+       totalSelectedSize += entry.getY();
+   }
+   rangeBarInfo.setText(getString(R.string.formatter_elements, Float.toString(totalSelectedSize)));
+   rangeBarValue.setText(
+           getString(
+                   R.string.area_range,
+                   Float.toString(rangeBarEntries.get(0).getX()),
+                   Float.toString(rangeBarEntries.get(rangeBarEntries.size() - 1).getX())
+           )
+   );
+}
 ```
 ## License
 ```
