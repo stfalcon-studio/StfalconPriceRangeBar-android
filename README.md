@@ -219,6 +219,9 @@ private Unit onRangeSelectedItemsSizeChanged(Integer selectedItemsSize) {
 ```
 Unit - it is a type from package kotlin.
 
+You can check it from full example on <a href="https://github.com/stfalcon-studio/StfalconPriceRangeBar-android/blob/master/sample/src/main/java/com/stfalcon/stfalconrangebarchartexample/Sample.java">Java</a>.
+
+
 ## License
 ```
 Copyright 2018 stfalcon.com
