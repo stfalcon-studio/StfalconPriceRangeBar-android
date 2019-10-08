@@ -167,6 +167,50 @@ private void initRangeBar() {
    );
 }
 ```
+**Main callbacks**
+```
+private Unit onPinPositionChanged(Integer index, String pinValue) {
+    seekbarAreaValue.setText(getString(R.string.formatter_meter, pinValue));
+    Log.d(TAG, "Index value = " + index);
+    return Unit.INSTANCE;
+}
+
+private Unit onSelectedEntriesSizeChanged(Integer selectedEntriesSize) {
+    Log.d(TAG, "SelectedEntriesSize = " + selectedEntriesSize);
+    return Unit.INSTANCE;
+}
+
+private Unit onSelectedItemsSizeChanged(Integer selectedItemsSize) {
+    seekBarAreaInfo.setText(getString(R.string.formatter_elements_int, selectedItemsSize));
+    return Unit.INSTANCE;
+}
+
+private Unit onRangeChanged(String leftPinValue, String rightPinValue) {
+    rangeBarValue.setText(getString(R.string.area_range, leftPinValue, rightPinValue));
+    return Unit.INSTANCE;
+}
+
+private Unit onLeftPinChanged(Integer index, String leftPinValue) {
+    Log.d(TAG, "index = " + index + " $leftPinValue = " + leftPinValue);
+    return Unit.INSTANCE;
+}
+
+private Unit onRightPinChanged(Integer index, String rightPinValue) {
+    Log.d(TAG, "index = " + index + " rightPinValue = " + rightPinValue);
+    return Unit.INSTANCE;
+}
+
+private Unit onSelectedRangeEntriesSizeChanged(Integer entriesSize) {
+    Log.d(TAG, "Range EntriesSize = " + entriesSize);
+    return Unit.INSTANCE;
+}
+
+private Unit onRangeSelectedItemsSizeChanged(Integer selectedItemsSize) {
+    rangeBarInfo.setText(getString(R.string.formatter_elements, selectedItemsSize.toString()));
+    return Unit.INSTANCE;
+}
+```
+Unit - it is a type from package kotlin.  
 ## License
 ```
 Copyright 2018 stfalcon.com
