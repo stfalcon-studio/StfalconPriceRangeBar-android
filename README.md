@@ -133,7 +133,7 @@ rangeBarInfo = findViewById(R.id.rangeBarInfo);
 ```
 **SeekBar**
 
-```
+```Java
 private void initSeekBar() {
    seekBar.setEntries(seekBarEntries);
    seekBar.setOnPinPositionChanged(this::onPinPositionChanged);
@@ -152,7 +152,7 @@ private void initSeekBar() {
 }
 ```
 **RangeBar**
-```
+```Java
 private void initRangeBar() {
    rangeBar.setEntries(rangeBarEntries);
    rangeBar.setOnRangeChanged(this::onRangeChanged);
