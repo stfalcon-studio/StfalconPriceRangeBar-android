@@ -175,7 +175,7 @@ private void initRangeBar() {
 }
 ```
 **Main callbacks**
-```
+```Java
 private Unit onPinPositionChanged(Integer index, String pinValue) {
     seekbarAreaValue.setText(getString(R.string.formatter_meter, pinValue));
     Log.d(TAG, "Index value = " + index);
