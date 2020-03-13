@@ -18,6 +18,7 @@ package com.stfalcon.pricerangebar
 import android.annotation.SuppressLint
 import android.content.Context
 import android.util.AttributeSet
+import android.util.Log
 import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
@@ -162,6 +163,15 @@ class RangeBarWithChart @JvmOverloads constructor(
      * Set selected values
      * */
     fun setSelectedEntries(startSelectedValue: Int, endSelectedValue: Int) {
+        if (startSelectedValue <= 0 || endSelectedValue <= 0) {
+            Log.e(this.javaClass.canonicalName,"You can't set values less than 0 or 0.")
+            return
+        }
+        if (startSelectedValue > endSelectedValue) {
+            Log.e(this.javaClass.canonicalName,"You can't set startSelectedValue greater than endSelectedValue.")
+            return
+        }
+
         elementRangeBar?.start = startSelectedValue
         elementRangeBar?.end = endSelectedValue
         onRangeChange(startSelectedValue, endSelectedValue)

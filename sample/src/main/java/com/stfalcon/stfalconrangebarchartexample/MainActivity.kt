@@ -1,6 +1,7 @@
 package com.stfalcon.stfalconrangebarchartexample
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.stfalcon.pricerangebar.model.BarEntry
 import com.stfalcon.stfalconrangebarchartexample.fixture.FixtureUtils
@@ -29,10 +30,10 @@ class MainActivity : AppCompatActivity() {
     private fun initSeekBar() {
         seekBar.onPinPositionChanged = { index, pinValue ->
             seekbarAreaValue.text = getString(R.string.formatter_meter, pinValue)
-            println("$index")
+            Log.d(this.javaClass.canonicalName,"$index")
         }
         seekBar.onSelectedEntriesSizeChanged = { selectedEntriesSize ->
-            println("$selectedEntriesSize")
+            Log.d(this.javaClass.canonicalName,"$selectedEntriesSize")
         }
         seekBar.onSelectedItemsSizeChanged = { selectedItemsSize ->
             seekbarAreaInfo.text =
@@ -47,18 +48,19 @@ class MainActivity : AppCompatActivity() {
             rangeBarValue.text = getString(R.string.area_range, leftPinValue, rightPinValue)
         }
         rangeBar.onLeftPinChanged = { index, leftPinValue ->
-            println("$index $leftPinValue")
+            Log.d(this.javaClass.canonicalName,"$index $leftPinValue")
         }
         rangeBar.onRightPinChanged = { index, rightPinValue ->
-            println("$index $rightPinValue")
+            Log.d(this.javaClass.canonicalName,"$index $rightPinValue")
         }
         rangeBar.onSelectedEntriesSizeChanged = { selectedEntriesSize ->
-            println("$selectedEntriesSize")
+            Log.d(this.javaClass.canonicalName,"$selectedEntriesSize")
         }
         rangeBar.onSelectedItemsSizeChanged = { selectedItemsSize ->
             rangeBarInfo.text = getString(R.string.formatter_elements, selectedItemsSize.toString())
         }
 
         rangeBar.setEntries(rangeBarEntries)
+        rangeBar.setSelectedEntries(10,20)
     }
 }

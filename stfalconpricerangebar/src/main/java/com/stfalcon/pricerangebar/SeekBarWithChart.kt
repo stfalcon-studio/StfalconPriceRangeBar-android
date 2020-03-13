@@ -18,6 +18,7 @@ package com.stfalcon.pricerangebar
 import android.annotation.SuppressLint
 import android.content.Context
 import android.util.AttributeSet
+import android.util.Log
 import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
@@ -145,6 +146,10 @@ class SeekBarWithChart @JvmOverloads constructor(
      * Set selected values
      * */
     fun setSelectedEntries(selectedValue: Int) {
+        if (selectedValue <= 0) {
+            Log.e(this.javaClass.canonicalName,"You can't set values less than 0 or 0.")
+            return
+        }
         elementSeekBar?.end = selectedValue
         onRangeChanged(selectedValue)
     }
@@ -270,8 +275,8 @@ class SeekBarWithChart @JvmOverloads constructor(
             }
         }
 
-        if (oldRightPinIndex != pinIndex) {
-            if (pinIndex >= 0 && pinIndex < entries.size) {
+        if (oldRightPinIndex != pinIndex || oldRightPinIndex == 0) {
+            if (pinIndex >= 0 && pinIndex <= entries.size) {
                 onPinPositionChanged?.invoke(
                     pinIndex,
                     selectedDataSet[pinIndex - 1].x.toInt().toString()
