@@ -11,8 +11,9 @@ Download via Gradle:
 ```implementation 'com.github.stfalcon:StfalconPriceRangeBar:0.1.2'```
 
 0.1.1 - added androidx support<br>
-0.1.2 - Fixed issue with wrong attribute
-        Added pre selection of values
+0.1.2 - Fixed issue with wrong attribute<br>
+      - Added pre selection of values<br>
+0.1.3 - Added incoming checks
 
 ## Usage
 For adding default seekbar with chart just put this code into your layout:
