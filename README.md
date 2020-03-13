@@ -112,7 +112,7 @@ If you want pre select some values you should use
 `setSelectedEntries` method.
 
 For example:
-```
+``` kotlin
 seekBar.setSelectedEntries(30)
 seekBar.setSelectedEntries(selectedEntriesSublist)
 
