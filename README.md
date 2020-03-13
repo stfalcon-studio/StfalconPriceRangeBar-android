@@ -10,7 +10,7 @@ Need iOS and Android apps, MVP development or prototyping? Contact us via info@s
 Download via Gradle: 
 ```implementation 'com.github.stfalcon:StfalconPriceRangeBar:0.1.2'```
 
-0.1.1 - added androidx support
+0.1.1 - added androidx support<br>
 0.1.2 - Fixed issue with wrong attribute
         Added pre selection of values
 
