@@ -27,7 +27,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initSeekBar() {
-        seekBar.setEntries(seekBarEntries)
         seekBar.onPinPositionChanged = { index, pinValue ->
             seekbarAreaValue.text = getString(R.string.formatter_meter, pinValue)
             println("$index")
@@ -40,19 +39,12 @@ class MainActivity : AppCompatActivity() {
                 getString(R.string.formatter_elements, selectedItemsSize.toString())
         }
 
-        val perimetr = seekBarEntries.last().x
-        seekbarAreaValue.text = getString(R.string.formatter_meter, perimetr.toString())
+        seekBar.setEntries(seekBarEntries)
 
-        var totalSelectedSize = 0
-        seekBarEntries.forEach { entry ->
-            totalSelectedSize += entry.y.toInt()
-        }
-
-        seekbarAreaInfo.text = getString(R.string.formatter_elements, totalSelectedSize.toString())
+        seekBar.setSelectedEntries(30)
     }
 
     private fun initRangeBar() {
-        rangeBar.setEntries(rangeBarEntries)
         rangeBar.onRangeChanged = { leftPinValue, rightPinValue ->
             rangeBarValue.text = getString(R.string.area_range, leftPinValue, rightPinValue)
         }
@@ -69,15 +61,9 @@ class MainActivity : AppCompatActivity() {
             rangeBarInfo.text = getString(R.string.formatter_elements, selectedItemsSize.toString())
         }
 
-        var totalSelectedSize = 0
-        rangeBarEntries.forEach { entry ->
-            totalSelectedSize += entry.y.toInt()
-        }
-        rangeBarInfo.text = getString(R.string.formatter_elements, totalSelectedSize.toString())
-        rangeBarValue.text = getString(
-            R.string.area_range,
-            rangeBarEntries.first().x.toInt().toString(),
-            rangeBarEntries.last().x.toInt().toString()
-        )
+        rangeBar.setEntries(rangeBarEntries)
+        //rangeBar.setSelectedEntries(20, 40)
+        val sublist = rangeBarEntries.subList(20,40)
+        rangeBar.setSelectedEntries(ArrayList(sublist))
     }
 }

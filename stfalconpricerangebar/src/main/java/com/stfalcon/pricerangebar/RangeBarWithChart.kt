@@ -25,6 +25,7 @@ import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
+import com.stfalcon.pricerangebar.extension.safeLet
 import com.stfalcon.pricerangebar.model.BarEntry
 import kotlinx.android.synthetic.main.item_range_bar.view.*
 import java.util.*
@@ -137,6 +138,33 @@ class RangeBarWithChart @JvmOverloads constructor(
 
     override fun onStartRangeChanged(rangeView: SimpleRangeView, leftPinIndex: Int) {
         onRangeChange(leftPinIndex, oldRightPinIndex)
+    }
+
+    /**
+     * Set selected values
+     * */
+    fun setSelectedEntries(selectedBarEntries: ArrayList<BarEntry>) {
+        val leftEntry = selectedBarEntries.firstOrNull()
+        val rightEntry = selectedBarEntries.lastOrNull()
+
+        val leftValue = entries.indexOfFirst { entry -> entry.x == leftEntry?.x }
+        val rightValue = entries.indexOfLast { entry -> entry.x == rightEntry?.x }
+
+        safeLet(leftValue, rightValue) { left, right ->
+            elementRangeBar?.start = left
+            elementRangeBar?.end = right
+
+            onRangeChange(left, right)
+        }
+    }
+
+    /**
+     * Set selected values
+     * */
+    fun setSelectedEntries(startSelectedValue: Int, endSelectedValue: Int) {
+        elementRangeBar?.start = startSelectedValue
+        elementRangeBar?.end = endSelectedValue
+        onRangeChange(startSelectedValue, endSelectedValue)
     }
 
     /**

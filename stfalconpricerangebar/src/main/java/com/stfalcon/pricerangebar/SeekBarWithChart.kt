@@ -134,6 +134,22 @@ class SeekBarWithChart @JvmOverloads constructor(
     }
 
     /**
+     * Set selected values
+     * */
+    fun setSelectedEntries(selectedBarEntries: ArrayList<BarEntry>) {
+        elementSeekBar?.end = selectedBarEntries.size
+        onRangeChanged(selectedBarEntries.size)
+    }
+
+    /**
+     * Set selected values
+     * */
+    fun setSelectedEntries(selectedValue: Int) {
+        elementSeekBar?.end = selectedValue
+        onRangeChanged(selectedValue)
+    }
+
+    /**
      * Set the data to display
      * */
     fun setEntries(seekBarEntries: ArrayList<BarEntry>) {

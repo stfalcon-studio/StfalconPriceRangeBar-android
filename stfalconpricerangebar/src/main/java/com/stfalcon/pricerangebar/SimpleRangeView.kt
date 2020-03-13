@@ -865,9 +865,10 @@ open class SimpleRangeView @JvmOverloads constructor(
         ACTIVE, ACTIVE_THUMB, FIXED, FIXED_THUMB, NORMAL
     }
 
-    override fun onSaveInstanceState(): Parcelable {
+    override fun onSaveInstanceState(): Parcelable? {
         //begin boilerplate code that allows parent classes to save state
         val superState = super.onSaveInstanceState()
+
         val ss = SavedState(superState)
         //end
 
@@ -1019,7 +1020,7 @@ open class SimpleRangeView @JvmOverloads constructor(
         var showFixedTicks: Boolean = false
         var showLabels: Boolean = false
 
-        internal constructor(superState: Parcelable) : super(superState)
+        internal constructor(superState: Parcelable?) : super(superState)
 
         @SuppressLint("NewApi")
         private constructor(input: Parcel, classLoader: ClassLoader) : super(input, classLoader) {
