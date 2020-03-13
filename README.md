@@ -107,6 +107,20 @@ rangeBar.onSelectedItemsSizeChanged = { selectedItemsSize ->
     println("$selectedItemsSize elements was selected")
 }
 ```
+
+If you want pre select some values you should use
+`setSelectedEntries` method.
+
+For example:
+```
+seekBar.setSelectedEntries(30)
+seekBar.setSelectedEntries(selectedEntriesSublist)
+
+...
+rangeBar.setSelectedEntries(20, 40)
+rangeBar.setSelectedEntries(selectedEntriesSublist)
+```
+
 ## How to use it in Java?
 We need init all views and variables
 ```Java

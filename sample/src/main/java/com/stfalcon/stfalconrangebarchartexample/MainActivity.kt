@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.stfalcon.pricerangebar.model.BarEntry
 import com.stfalcon.stfalconrangebarchartexample.fixture.FixtureUtils
 import kotlinx.android.synthetic.main.activity_main.*
-import java.util.ArrayList
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -40,8 +40,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         seekBar.setEntries(seekBarEntries)
-
-        seekBar.setSelectedEntries(30)
     }
 
     private fun initRangeBar() {
@@ -62,8 +60,5 @@ class MainActivity : AppCompatActivity() {
         }
 
         rangeBar.setEntries(rangeBarEntries)
-        //rangeBar.setSelectedEntries(20, 40)
-        val sublist = rangeBarEntries.subList(20,40)
-        rangeBar.setSelectedEntries(ArrayList(sublist))
     }
 }
