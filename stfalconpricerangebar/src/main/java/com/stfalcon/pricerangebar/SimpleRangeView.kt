@@ -782,11 +782,11 @@ class SimpleRangeView @JvmOverloads constructor(
         activeThumbRadius,
         fixedThumbRadius,
         activeThumbFocusRadius
-    ).max()!!
+    ).maxOrNull()!!
 
     private fun calcMaxHeight(): Float {
         val maxRadius = calcMaxRadius() * 2
-        val maxLineHeight = listOf(lineThickness, activeLineThickness, fixedLineThickness).max()!!
+        val maxLineHeight = listOf(lineThickness, activeLineThickness, fixedLineThickness).maxOrNull()!!
         return Math.max(maxRadius, maxLineHeight)
     }
 

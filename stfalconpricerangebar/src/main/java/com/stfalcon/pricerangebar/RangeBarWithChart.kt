@@ -29,7 +29,7 @@ import com.stfalcon.pricerangebar.model.BarEntry
 import kotlinx.android.synthetic.main.item_range_bar.view.*
 import java.util.*
 
-class RangeBarWithChart @JvmOverloads constructor(
+open class RangeBarWithChart @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr),
     SimpleRangeView.OnTrackRangeListener {
