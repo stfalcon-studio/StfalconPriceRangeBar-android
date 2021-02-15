@@ -2,5 +2,7 @@
     <string name="app_name">StfalconPriceRangeBar-example</string>
     <string name="area_range">%1$sK€ - %2$sK€</string>
     <string name="formatter_meter">%1$s m</string>
+    <string name="formatter_meter_int">%1$d m</string>
     <string name="formatter_elements">%1$s elements was selected</string>
+    <string name="formatter_elements_int">%1$d elements was selected</string>
 </resources>

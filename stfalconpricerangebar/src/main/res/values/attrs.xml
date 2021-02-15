@@ -62,7 +62,7 @@
         <attr name="barLineColor" format="color" />
         <attr name="barThumbColor" format="color" />
         <attr name="barActiveTickRadius" format="dimension" />
-        <attr name="barActiveThumbColor" format="dimension" />
+        <attr name="barActiveThumbColor" format="color" />
     </declare-styleable>
 
 </resources>

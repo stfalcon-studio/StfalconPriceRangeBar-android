@@ -17,17 +17,18 @@ package com.stfalcon.pricerangebar
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.support.constraint.ConstraintLayout
-import android.support.v4.content.ContextCompat
 import android.util.AttributeSet
+import android.util.Log
 import android.view.LayoutInflater
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
 import com.stfalcon.pricerangebar.model.BarEntry
 import kotlinx.android.synthetic.main.item_seek_bar.view.*
-import java.util.*
+import java.util.ArrayList
 
 class SeekBarWithChart @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
@@ -131,6 +132,26 @@ class SeekBarWithChart @JvmOverloads constructor(
 
     override fun onStartRangeChanged(rangeView: SimpleRangeView, leftPinIndex: Int) {
         // We donn`t use it
+    }
+
+    /**
+     * Set selected values
+     * */
+    fun setSelectedEntries(selectedBarEntries: ArrayList<BarEntry>) {
+        elementSeekBar?.end = selectedBarEntries.size
+        onRangeChanged(selectedBarEntries.size)
+    }
+
+    /**
+     * Set selected values
+     * */
+    fun setSelectedEntries(selectedValue: Int) {
+        if (selectedValue <= 0) {
+            Log.e(this.javaClass.canonicalName,"You can't set values less than 0 or 0.")
+            return
+        }
+        elementSeekBar?.end = selectedValue
+        onRangeChanged(selectedValue)
     }
 
     /**
@@ -254,8 +275,8 @@ class SeekBarWithChart @JvmOverloads constructor(
             }
         }
 
-        if (oldRightPinIndex != pinIndex) {
-            if (pinIndex >= 0 && pinIndex < entries.size) {
+        if (oldRightPinIndex != pinIndex || oldRightPinIndex == 0) {
+            if (pinIndex >= 0 && pinIndex <= entries.size) {
                 onPinPositionChanged?.invoke(
                     pinIndex,
                     selectedDataSet[pinIndex - 1].x.toInt().toString()

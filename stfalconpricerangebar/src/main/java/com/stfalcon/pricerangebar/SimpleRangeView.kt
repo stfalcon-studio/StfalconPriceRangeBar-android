@@ -18,19 +18,20 @@ package com.stfalcon.pricerangebar
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.animation.ValueAnimator
+import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.*
 import android.os.Parcel
 import android.os.Parcelable
-import android.support.v4.view.ViewCompat
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
+import androidx.core.view.ViewCompat
 import com.stfalcon.pricerangebar.extension.convertable
 import kotlin.properties.Delegates
 import kotlin.properties.ReadWriteProperty
 
-class SimpleRangeView @JvmOverloads constructor(
+open class SimpleRangeView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
@@ -864,9 +865,10 @@ class SimpleRangeView @JvmOverloads constructor(
         ACTIVE, ACTIVE_THUMB, FIXED, FIXED_THUMB, NORMAL
     }
 
-    override fun onSaveInstanceState(): Parcelable {
+    override fun onSaveInstanceState(): Parcelable? {
         //begin boilerplate code that allows parent classes to save state
         val superState = super.onSaveInstanceState()
+
         val ss = SavedState(superState)
         //end
 
@@ -1018,8 +1020,9 @@ class SimpleRangeView @JvmOverloads constructor(
         var showFixedTicks: Boolean = false
         var showLabels: Boolean = false
 
-        internal constructor(superState: Parcelable) : super(superState)
+        internal constructor(superState: Parcelable?) : super(superState)
 
+        @SuppressLint("NewApi")
         private constructor(input: Parcel, classLoader: ClassLoader) : super(input, classLoader) {
             this.labelColor = input.readInt()
             this.activeLabelColor = input.readInt()
