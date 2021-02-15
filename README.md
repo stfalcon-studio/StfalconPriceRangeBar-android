@@ -7,7 +7,7 @@
 ## Who we are
 Need iOS and Android apps, MVP development or prototyping? Contact us via info@stfalcon.com. We develop software since 2009, and we're known experts in this field. Check out our portfolio and see more libraries from stfalcon-studio.
 ## Download
-[![](https://jitpack.io/v/stfalcon-studio/StfalconPriceRangeBar-android.svg)](https://jitpack.io/#stfalcon-studio/StfalconPriceRangeBar-android)
+
 1. Add jitpack to the root build.gradle file of your project at the end of repositories.
 ```
 allprojects {
@@ -21,9 +21,12 @@ allprojects {
 ```
 dependencies {
   ...
-  implementation "com.github.stfalcon-studio:StfalconPriceRangeBar-android:"
+  implementation "com.github.stfalcon-studio:StfalconPriceRangeBar-android:[latest_version]"
 }  
 ```
+[![](https://jitpack.io/v/stfalcon-studio/StfalconPriceRangeBar-android.svg)](https://jitpack.io/#stfalcon-studio/StfalconPriceRangeBar-android)
+
+Where the `latest_version` is the value from JitPack.io.
 
 ## Usage
 For adding default seekbar with chart just put this code into your layout:
