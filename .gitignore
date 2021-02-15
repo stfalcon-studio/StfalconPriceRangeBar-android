@@ -33,5 +33,3 @@ android/proguard/
 build/
 .gradle
 
-gradle.properties
-!/gradle/wrapper/gradle-wrapper.jar
